@@ -28,9 +28,14 @@ int main(int argc, char *argv[])
     test_array[i] = rand() % 20;
 
   Show(test_array, array_len);
-  cout << endl;
+ /* cout << endl;
   InsertionSort(test_array, array_len);
   cout << "After Insertion Sorting: " << endl;
+  Show(test_array, array_len);*/
+
+  cout << endl;
+  MergeSort(test_array, 0, array_len - 1);
+  cout << "After Merge Sorting: " << endl;
   Show(test_array, array_len);
   return 0;
 }
