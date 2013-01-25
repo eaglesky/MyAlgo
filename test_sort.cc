@@ -33,9 +33,18 @@ int main(int argc, char *argv[])
   cout << "After Insertion Sorting: " << endl;
   Show(test_array, array_len);*/
 
-  cout << endl;
+ /* cout << endl;
   MergeSort(test_array, 0, array_len - 1);
   cout << "After Merge Sorting: " << endl;
-  Show(test_array, array_len);
+  Show(test_array, array_len);*/
+
+  MaxHeap<int> test_heap(test_array, array_len); 
+  cout << endl;
+  cout << "Heap length = " << test_heap.length << endl;
+  cout << "Heap Size = " << test_heap.heap_size << endl;
+  test_heap.HeapSort();
+  Show(test_array,array_len);
+
+  delete []test_array;
   return 0;
 }
